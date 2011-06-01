@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Reference Manual http://logback.qos.ch/manual/index.html -->
-
-<configuration>
+<configuration scan="true">
 
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <encoder charset="UTF-8">
@@ -17,7 +15,7 @@
         </filter>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>~/maventest-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${user.home}/maventest-%d{yyyy-MM-dd}.log.gz</fileNamePattern>
             <maxHistory>10</maxHistory>
         </rollingPolicy>
 
